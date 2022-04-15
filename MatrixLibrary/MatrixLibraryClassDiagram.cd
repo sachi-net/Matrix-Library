@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="MatrixLibrary.Matrix">
+    <Position X="0.5" Y="1.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AIigCAQADAAAAEAE4CGBAACAAQABAKAAAAQAQAhEAiA=</HashCode>
+      <FileName>Matrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatrixLibrary.Exceptions.InvalidMatrixDimensionException" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\InvalidMatrixDimensionException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatrixLibrary.Exceptions.InvalidMatrixOrderException" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\InvalidMatrixOrderException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatrixLibrary.Exceptions.MatrixDimesionNotMatchException" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\MatrixDimesionNotMatchException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatrixLibrary.Exceptions.MatrixNotInitializedException" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\MatrixNotInitializedException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MatrixLibrary.Exceptions.MatrixNotInvertibleException" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\MatrixNotInvertibleException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Exception" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ArgumentNullException" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.ArgumentException" Collapsed="true">
+    <Position X="6.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.SystemException" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="MatrixLibrary.MessageTemplates.Message">
+    <Position X="4" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAgAAAAACgAAAAQIAAQAAEAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>MessageTemplates\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
