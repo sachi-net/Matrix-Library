@@ -46,7 +46,7 @@ namespace MatrixLibrary
         /// </summary>
         /// <param name="values">All matrix elements as a single-dimensional linear array.</param>
         /// <exception cref="ArgumentNullException">Throws when values array is null.</exception>
-        /// <exception cref="MatrixDimesionNotMatch">Throws when matrix dimension not match with element counts in values array.</exception>
+        /// <exception cref="MatrixDimesionNotMatchException">Throws when matrix dimension not match with element counts in values array.</exception>
         public void SetMatrix(double[] values)
         {
             if (values is null)
@@ -56,7 +56,7 @@ namespace MatrixLibrary
 
             if (Rows * Columns != values.Length)
             {
-                throw new MatrixDimesionNotMatch(Message.DIMENSION_NOT_MATCH);
+                throw new MatrixDimesionNotMatchException(Message.DIMENSION_NOT_MATCH);
             }
 
             for (int i = 0; i < values.Length; i++)
@@ -72,7 +72,7 @@ namespace MatrixLibrary
         /// </summary>
         /// <param name="values">All matrix elements as a two-dimensional array.</param>
         /// <exception cref="ArgumentNullException">Throws when values array is null.</exception>
-        /// <exception cref="MatrixDimesionNotMatch">Throws when matrix dimension not match with element counts in values array.</exception>
+        /// <exception cref="MatrixDimesionNotMatchException">Throws when matrix dimension not match with element counts in values array.</exception>
         public void SetMatrix(double[,] values)
         {
             if (values is null)
@@ -82,7 +82,7 @@ namespace MatrixLibrary
 
             if (Rows * Columns != values.Length)
             {
-                throw new MatrixDimesionNotMatch(Message.DIMENSION_NOT_MATCH);
+                throw new MatrixDimesionNotMatchException(Message.DIMENSION_NOT_MATCH);
             }
 
             _data = values;
@@ -132,11 +132,11 @@ namespace MatrixLibrary
         }
 
         /// <summary>
-        /// Determine whethe this instance is and the specified Matrix object have the same dimension and values.
+        /// Determine whether this instance and the specified Matrix object have the same dimension and values.
         /// </summary>
         /// <param name="matrix">The matrix to be compared with this instance.</param>
         /// <returns>True if the specified matrix has same dimension and values or otherwise False. If the matrix null, the function returns False.</returns>
-        public bool Equals(Matrix matrix)
+        private bool Equals(Matrix matrix)
         {
             if (matrix is null)
             {
@@ -189,7 +189,7 @@ namespace MatrixLibrary
         }
 
         /// <summary>
-        /// Convert this matrix to an multi-dimensional array cosists with all elements.
+        /// Convert this matrix to a multi-dimensional array cosists with all elements.
         /// </summary>
         /// <returns>Multi-dimensional array with all matrix elements.</returns>
         public double[,] ToArray()
@@ -628,7 +628,7 @@ namespace MatrixLibrary
 
             if (a.Columns != b.Rows)
             {
-                throw new InvalidOperationException(Message.INVALID_OPERATION_MULT);
+                throw new InvalidMatrixOrderException(Message.INVALID_OPERATION_MULT);
             }
 
             return a.Multiply(b);
@@ -651,9 +651,9 @@ namespace MatrixLibrary
         #endregion
 
         /// <summary>
-        /// Determine whethe this instance is and the specified  object (which should be a Matrix) have the same dimension and values.
+        /// Determine whether this instance and the specified object (which should be a Matrix) have the same dimension and values.
         /// </summary>
-        /// <param name="matrix">The matrix object to be compared with this instance.</param>
+        /// <param name="obj">The matrix object to be compared with this instance.</param>
         /// <returns>True if the specified matrix has same dimension and values or otherwise False. If the matrix null, the function returns False.</returns>
         public override bool Equals(object obj)
         {
