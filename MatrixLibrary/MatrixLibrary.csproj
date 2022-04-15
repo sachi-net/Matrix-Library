@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Sachintha Silva</Authors>
+    <Company>Sachi-Home</Company>
+    <Description>Matrix based calculator library with common matrix operations</Description>
+    <Copyright>Sachintha-PC</Copyright>
+  </PropertyGroup>
+
+</Project>
