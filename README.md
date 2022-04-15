@@ -10,7 +10,7 @@ Add `MatrixLibrary.dll` to project dependencies.
 Refer the content from the code by adding `using MatrixLibrary;` at the top.
 
 ## Implementation Overview
-Following table indicates the implementation structure of MatrixLibray.
+Following tables indicate the implementation structure of MatrixLibray.
 
 ### Properties
 |Name|Type|Description|
