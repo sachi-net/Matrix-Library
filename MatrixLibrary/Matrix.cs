@@ -564,6 +564,12 @@ namespace MatrixLibrary
         }
 
         #region Matrix Generic Operations
+        /// <summary>
+        /// Add matrix a to matrix b.
+        /// </summary>
+        /// <param name="a">Matrix a as left operand.</param>
+        /// <param name="b">Matrix b as right operand.</param>
+        /// <returns>Resultant matrix of addition.</returns>
         public static Matrix operator +(Matrix a, Matrix b)
         {
             if (a is null)
@@ -584,6 +590,12 @@ namespace MatrixLibrary
             return a.AddTo(b);
         }
 
+        /// <summary>
+        /// Subtract matrix b from matrix a.
+        /// </summary>
+        /// <param name="a">Matrix a as left operand.</param>
+        /// <param name="b">Matrix b as right operand.</param>
+        /// <returns>Resultant matrix of subtraction.</returns>
         public static Matrix operator -(Matrix a, Matrix b)
         {
             if (a is null)
@@ -604,6 +616,12 @@ namespace MatrixLibrary
             return b.SubtractFrom(a);
         }
 
+        /// <summary>
+        /// Maultiply the matrix with provided scalar value.
+        /// </summary>
+        /// <param name="scalar">Scalar value</param>
+        /// <param name="matrix">Matrix to be multiplied with the scalar.</param>
+        /// <returns>Resultant matrix of scalar multiplication.</returns>
         public static Matrix operator *(double scalar, Matrix matrix)
         {
             if (matrix is null)
@@ -614,6 +632,12 @@ namespace MatrixLibrary
             return matrix.MultiplyByScalar(scalar);
         }
 
+        /// <summary>
+        /// Multiply matrix a with matrix b.
+        /// </summary>
+        /// <param name="a">Matrix a as left operand.</param>
+        /// <param name="b">Matrix b as right operand.</param>
+        /// <returns>Resultant matrix of multiplication.</returns>
         public static Matrix operator *(Matrix a, Matrix b)
         {
             if (a is null)
@@ -634,6 +658,13 @@ namespace MatrixLibrary
             return a.Multiply(b);
         }
 
+
+        /// <summary>
+        /// Compare whether the matrix a is equal to matrix b.
+        /// </summary>
+        /// <param name="a">Matrix a as left operand.</param>
+        /// <param name="b">Matrix b as right operand.</param>
+        /// <returns>Return True if equals, otherwise False. If any matrix is null, it returns False.</returns>
         public static bool operator ==(Matrix a, Matrix b)
         {
             if (a is null || b is null)
@@ -644,6 +675,12 @@ namespace MatrixLibrary
             return a.Equals(b);
         }
 
+        /// <summary>
+        /// Compare whether the matrix a is not equal to matrix b.
+        /// </summary>
+        /// <param name="a">Matrix a as left operand.</param>
+        /// <param name="b">Matrix b as right operand.</param>
+        /// <returns>Return True if not equals, otherwise False.</returns>
         public static bool operator !=(Matrix a, Matrix b)
         {
             return !a.Equals(b);
