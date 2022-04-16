@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MatrixLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:MatrixLibrary.Exceptions.InvalidMatrixDimensionException">
+            <summary>
+            Exception when the matrix dimension is unrealistic to initialize the matrix.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.InvalidMatrixDimensionException.#ctor">
+            <summary>
+            Initialize an instance of InvalidMatrixDimensionException.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.InvalidMatrixDimensionException.#ctor(System.String)">
+            <summary>
+            Initialize an instance of InvalidMatrixDimensionException with specified message.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.InvalidMatrixDimensionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initialize an instance of InvalidMatrixDimensionException with specified message and exception that cause this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+            <param name="inner">The exception that is the cause of the current exception, or a null reference.</param>
+        </member>
+        <member name="T:MatrixLibrary.Exceptions.InvalidMatrixOrderException">
+            <summary>
+            Exception when the matrix order is not compatible.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.InvalidMatrixOrderException.#ctor">
+            <summary>
+            Initialize an instance of InvalidMatrixOrderException.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.InvalidMatrixOrderException.#ctor(System.String)">
+            <summary>
+            Initialize an instance of InvalidMatrixOrderException with specified message.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.InvalidMatrixOrderException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initialize an instance of InvalidMatrixOrderException with specified message and exception that cause this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+            <param name="inner">The exception that is the cause of the current exception, or a null reference.</param>
+        </member>
+        <member name="T:MatrixLibrary.Exceptions.MatrixDimesionNotMatchException">
+            <summary>
+            Exception when the matrix dimension is not compatible with dataset.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixDimesionNotMatchException.#ctor">
+            <summary>
+            Initialize an instance of MatrixDimesionNotMatchException.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixDimesionNotMatchException.#ctor(System.String)">
+            <summary>
+            Initialize an instance of MatrixDimesionNotMatchException with specified message.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixDimesionNotMatchException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initialize an instance of MatrixDimesionNotMatchException with specified message and exception that cause this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+            <param name="inner">The exception that is the cause of the current exception, or a null reference.</param>
+        </member>
+        <member name="T:MatrixLibrary.Exceptions.MatrixNotInitializedException">
+            <summary>
+            Exception when the matrix is not initialized before usage.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixNotInitializedException.#ctor">
+            <summary>
+            Initialize an instance of MatrixNotInitializedException.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixNotInitializedException.#ctor(System.String)">
+            <summary>
+            Initialize an instance of MatrixNotInitializedException with specified message.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixNotInitializedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initialize an instance of MatrixNotInitializedException with specified message and exception that cause this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+            <param name="inner">The exception that is the cause of the current exception, or a null reference.</param>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixNotInitializedException.#ctor(System.String,System.String)">
+            <summary>
+            Initialize an instance of MatrixNotInitializedException with specified message and argument that cause this exception.
+            </summary>
+            <param name="matrixName">Name of the argunment that cause this exception.</param>
+            <param name="message">The error message that explains the reason for this exception.</param>
+        </member>
+        <member name="T:MatrixLibrary.Exceptions.MatrixNotInvertibleException">
+            <summary>
+            Exception when the matrix does not support inverse operation.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixNotInvertibleException.#ctor">
+            <summary>
+            Initialize an instance of MatrixNotInvertibleException.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixNotInvertibleException.#ctor(System.String)">
+            <summary>
+            Initialize an instance of MatrixNotInvertibleException with specified message.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+        </member>
+        <member name="M:MatrixLibrary.Exceptions.MatrixNotInvertibleException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initialize an instance of MatrixNotInvertibleException with specified message and exception that cause this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for this exception.</param>
+            <param name="inner">The exception that is the cause of the current exception, or a null reference.</param>
+        </member>
+        <member name="T:MatrixLibrary.Matrix">
+            <summary>
+            Defines a matrix with common matrix properties and operations.
+            </summary>
+        </member>
+        <member name="P:MatrixLibrary.Matrix.Rows">
+            <summary>
+            Get number of rows in matrix dimension.
+            </summary>
+        </member>
+        <member name="P:MatrixLibrary.Matrix.Columns">
+            <summary>
+            Get number of columns in matrix dimension.
+            </summary>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initialize new matrix with given dimension.
+            </summary>
+            <param name="rows">Number of rows.</param>
+            <param name="columns">Number of rows.</param>
+            <exception cref="T:MatrixLibrary.Exceptions.InvalidMatrixDimensionException">Throws when matrix dimension is negative or zero.</exception>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.SetMatrix(System.Double[])">
+            <summary>
+            Set elements to this matrix using linear dataset.
+            </summary>
+            <param name="values">All matrix elements as a single-dimensional linear array.</param>
+            <exception cref="T:System.ArgumentNullException">Throws when values array is null.</exception>
+            <exception cref="T:MatrixLibrary.Exceptions.MatrixDimesionNotMatchException">Throws when matrix dimension not match with element counts in values array.</exception>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.SetMatrix(System.Double[0:,0:])">
+            <summary>
+            Set elements to this matrix using two-dimensional dataset.
+            </summary>
+            <param name="values">All matrix elements as a two-dimensional array.</param>
+            <exception cref="T:System.ArgumentNullException">Throws when values array is null.</exception>
+            <exception cref="T:MatrixLibrary.Exceptions.MatrixDimesionNotMatchException">Throws when matrix dimension not match with element counts in values array.</exception>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.SetValueAt(System.Int32,System.Int32,System.Double)">
+            <summary>
+            Set matrix element at specific location with 1-based indexing.
+            </summary>
+            <param name="i">1-based row index of the element.</param>
+            <param name="j">1-based column index of the element.</param>
+            <param name="value">The value to be set.</param>
+            <exception cref="T:System.IndexOutOfRangeException">Throws when i and j indexes are 0 or negative or higher than the matrix dimension.</exception>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.GetValueAt(System.Int32,System.Int32)">
+            <summary>
+            Get matrix element at specific location with 1-based indexing.
+            </summary>
+            <param name="i">1-based row index of the element.</param>
+            <param name="j">1-based column index of the element.</param>
+            <exception cref="T:System.IndexOutOfRangeException">Throws when i and j indexes are 0 or negative or higher than the matrix dimension.</exception>
+            <returns>The value at the specified location.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.IsSquare">
+            <summary>
+            Verify whether the matrix is a square matrix.
+            </summary>
+            <returns>True if a square matrix or otherwise False.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.Equals(MatrixLibrary.Matrix)">
+            <summary>
+            Determine whether this instance and the specified Matrix object have the same dimension and values.
+            </summary>
+            <param name="matrix">The matrix to be compared with this instance.</param>
+            <returns>True if the specified matrix has same dimension and values or otherwise False. If the matrix null, the function returns False.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.Print(System.Int32,System.Int32,System.Char)">
+            <summary>
+            Get the elements in the matrix as formated with row and column structure.
+            </summary>
+            <param name="precision">Decimal precision when displaying the matrix. Default is 5.</param>
+            <param name="paddingLeft">Left-padding for each element before displaying the matrix. Default is 5.</param>
+            <param name="paddingChar">Character to use when padding. Default is a single space.</param>
+            <returns>Matrix elements as a string value.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.ToArray">
+            <summary>
+            Convert this matrix to a multi-dimensional array cosists with all elements.
+            </summary>
+            <returns>Multi-dimensional array with all matrix elements.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.Determinant">
+            <summary>
+            Calculate the determinant of the matrix.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Throws when the matrix is not a square matrix.</exception>
+            <returns>Determinant value of the matrix as a double value.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.Transpose">
+            <summary>
+            Get transposed matrix of this matrix.
+            </summary>
+            <returns>Transposed matrix.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.GetMinorAt(System.Int32,System.Int32)">
+            <summary>
+            Get the minor value of the element found at given location with 1-based indexing.
+            </summary>
+            <param name="i">1-based row index of the element to be found the minor value.</param>
+            <param name="j">1-based column index of the element to be found the minor value.</param>
+            <exception cref="T:System.InvalidOperationException">Throws when the matrix is not a square matrix.</exception>
+            <exception cref="T:System.IndexOutOfRangeException">Throws when i and j indexes are 0 or negative or higher than the matrix dimension.</exception>
+            <returns>Minor value of the element found at given location.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.GetCoFactorAt(System.Int32,System.Int32)">
+            <summary>
+            Get the cofactor value of the element found at given location with 1-based indexing.
+            </summary>
+            <param name="i">1-based row index of the element to be found the minor value.</param>
+            <param name="j">1-based column index of the element to be found the minor value.</param>
+            <exception cref="T:System.InvalidOperationException">Throws when the matrix is not a square matrix.</exception>
+            <exception cref="T:System.IndexOutOfRangeException">Throws when i and j indexes are 0 or negative or higher than the matrix dimension.</exception>
+            <returns>Minor value of the element found at given location.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.MinorMatrix">
+            <summary>
+            Construct the minor matrix for this matrix.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Throws when the matrix is not a square matrix.</exception>
+            <returns>Minor matrix for this matrix.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.CoFactorMatrix">
+            <summary>
+            Construct the cofactor matrix for this matrix.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Throws when the matrix is not a square matrix.</exception>
+            <returns>Cofactor matrix for this matrix.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.AdjointMatrix">
+            <summary>
+            Construct the adjoint (adjugate) matrix for this matrix.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Throws when the matrix is not a square matrix.</exception>
+            <returns>Adjoint (adjugate) matrix for this matrix.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.InverseMatrix">
+            <summary>
+            Construct the inverse matrix for this matrix.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Throws when the matrix is not a square matrix.</exception>
+            <exception cref="T:MatrixLibrary.Exceptions.MatrixNotInvertibleException">Throws when the determinant of this matrix is zero.</exception>
+            <returns>Inverse matrix of this matrix.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.IdentityMatrix">
+            <summary>
+            Construct the identity matrix based on the dimension of this matrix.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Throws when the matrix is not a square matrix.</exception>
+            <returns>Identity matrix based on this matrix</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.op_Addition(MatrixLibrary.Matrix,MatrixLibrary.Matrix)">
+            <summary>
+            Add matrix a to matrix b.
+            </summary>
+            <param name="a">Matrix a as left operand.</param>
+            <param name="b">Matrix b as right operand.</param>
+            <returns>Resultant matrix of addition.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.op_Subtraction(MatrixLibrary.Matrix,MatrixLibrary.Matrix)">
+            <summary>
+            Subtract matrix b from matrix a.
+            </summary>
+            <param name="a">Matrix a as left operand.</param>
+            <param name="b">Matrix b as right operand.</param>
+            <returns>Resultant matrix of subtraction.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.op_Multiply(System.Double,MatrixLibrary.Matrix)">
+            <summary>
+            Maultiply the matrix with provided scalar value.
+            </summary>
+            <param name="scalar">Scalar value</param>
+            <param name="matrix">Matrix to be multiplied with the scalar.</param>
+            <returns>Resultant matrix of scalar multiplication.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.op_Multiply(MatrixLibrary.Matrix,MatrixLibrary.Matrix)">
+            <summary>
+            Multiply matrix a with matrix b.
+            </summary>
+            <param name="a">Matrix a as left operand.</param>
+            <param name="b">Matrix b as right operand.</param>
+            <returns>Resultant matrix of multiplication.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.op_Equality(MatrixLibrary.Matrix,MatrixLibrary.Matrix)">
+            <summary>
+            Compare whether the matrix a is equal to matrix b.
+            </summary>
+            <param name="a">Matrix a as left operand.</param>
+            <param name="b">Matrix b as right operand.</param>
+            <returns>Return True if equals, otherwise False. If any matrix is null, it returns False.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.op_Inequality(MatrixLibrary.Matrix,MatrixLibrary.Matrix)">
+            <summary>
+            Compare whether the matrix a is not equal to matrix b.
+            </summary>
+            <param name="a">Matrix a as left operand.</param>
+            <param name="b">Matrix b as right operand.</param>
+            <returns>Return True if not equals, otherwise False.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.Equals(System.Object)">
+            <summary>
+            Determine whether this instance and the specified object (which should be a Matrix) have the same dimension and values.
+            </summary>
+            <param name="obj">The matrix object to be compared with this instance.</param>
+            <returns>True if the specified matrix has same dimension and values or otherwise False. If the matrix null, the function returns False.</returns>
+        </member>
+        <member name="M:MatrixLibrary.Matrix.GetHashCode">
+            <summary>
+            Get the hash code for this matrix.
+            </summary>
+            <returns>A 32-bit integer hash code.</returns>
+        </member>
+    </members>
+</doc>
