@@ -34,7 +34,7 @@ Following tables indicate the implementation structure of MatrixLibray.
 |`GetValueAt(int i, int j)`|`double`|Get matrix element at specific location with 1-based indexing|
 |`IdentityMatrix()`|`Matrix`|Construct the identity matrix based on the dimension of this matrix|
 |`InverseMatrix()`|`Matrix`|Construct the inverse matrix for this matrix|
-|`IsSquare`|`bool`|Verify whether the matrix is a square matrix|
+|`IsSquare()`|`bool`|Verify whether the matrix is a square matrix|
 |`MinorMatrix()`|`Matrix`|Construct the minor matrix for this matrix|
 |`Print([int precision], [int paddingLeft], [char paddingChar])`|`string`|Get the elements in the matrix as formated with row and column structure|
 |`SetMatrix(double[,] values)`|`void`|Set elements to this matrix using two-dimensional dataset|
